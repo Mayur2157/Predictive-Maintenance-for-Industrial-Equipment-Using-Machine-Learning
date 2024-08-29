@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predictive Maintenance Dashboard</h1>
+        <div class="metrics">
+            <div>
+                <h3>Temperature (°C)</h3>
+                <p id="temp">Loading...</p>
+            </div>
+            <div>
+                <h3>Vibration (mm/s)</h3>
+                <p id="vibration">Loading...</p>
+            </div>
+            <div>
+                <h3>Pressure (Pa)</h3>
+                <p id="pressure">Loading...</p>
+            </div>
+            <div>
+                <h3>RPM</h3>
+                <p id="rpm">Loading...</p>
+            </div>
+            <div>
+                <h3>Maintenance Required</h3>
+                <p id="maintenance">Loading...</p>
+            </div>
+        </div>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
